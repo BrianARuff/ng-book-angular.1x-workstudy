@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body ng-app="CalculatorApp" ng-controller="CalculatorController as c">
+    <input type="text" ng-model="calculator.value" /> {{calculator.value}}
+    <input type="text" ng-model="calculator.operator" />
+    {{calculator.operator}}
+    <button ng-click="calculate(calculator.value, calculator.operator)">
+      Do Math
+    </button>
+    <h4>{{calculator.total}}</h4>
+    <script src="../node_modules/angular/angular.min.js"></script>
+    <script src="./calculator.html"></script>
+    <script src="./calculator.js"></script>
+  </body>
+</html>

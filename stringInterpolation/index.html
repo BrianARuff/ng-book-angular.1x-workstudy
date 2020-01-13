@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="emailEditor" ng-controller="MyController">
+      <input ng-model="to" type="email" placeholder="Recipient" />
+      <textarea ng-model="emailBody"></textarea>
+
+      <div id="emailPreview">
+        <pre>__ previewText __</pre>
+      </div>
+    </div>
+
+    <script src="../node_modules/angular/angular.min.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
