@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body ng-app="app" ng-controller="Controller">
+    <h4>{{name}}</h4>
+    <!-- multiple formats of the same format will take the last format given (number:5 in this case) -->
+    <h4>{{number | number:15 | number:5}}</h4>
+    <h4>{{number|currency:""}}</h4>
+    <h4>{{date | date:'longDate'}} {{date | date:'shortTime'}}</h4>
+    <h4>{{date | date:'MM-dd-yyyy'}}</h4>
+    <h4>{{date | date:'hh:mm a'}}</h4>
+    <h4>
+      {{ people = [ { name: 'Brian', age: "30" }, { name: 'John', age: "33" }, {
+      name: 'Bob', age: 29 } ] | filter:"o" }}
+    </h4>
+    <h4 ng-repeat="person in people">
+      {{person.name}} - <span>{{person.age}}</span>
+    </h4>
+    <script src="../node_modules/angular/angular.min.js"></script>
+    <script src="./index.js"></script>
+    <script>
+      function isCapitalized(val) {
+        if (val[0] === "B") {
+          return true;
+        } else {
+          return false;
+        }
+      }
+    </script>
+  </body>
+</html>
