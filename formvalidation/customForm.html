@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body ng-app="customForm" ng-controller="customFormController">
+    <li ng-click="singleClickName()">Click<a href="#">{{name}}</a></li>
+    <select
+      ng-options="person.name for person in links | orderBy:'name' track by person.name"
+      ng-model="selectedOption"
+      ng-change="log(selectedOption)"
+    >
+    </select>
+    <script src="../node_modules/angular/angular.min.js"></script>
+    <script src="./customForm.js"></script>
+  </body>
+</html>
